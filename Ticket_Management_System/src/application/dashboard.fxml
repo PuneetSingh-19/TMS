@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="760.0" prefWidth="1426.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dashboardController">
+   <center>
+      <AnchorPane prefHeight="765.0" prefWidth="1467.0" style="-fx-background-color: rgba(239, 255, 239, 1);" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane id=".button" layoutX="248.0" layoutY="169.0" prefHeight="590.0" prefWidth="1200.0" stylesheets="@application.css" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <GridPane fx:id="allTasksBody" prefHeight="590.0" prefWidth="1223.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="874.0" text="All Tasks Body" textAlignment="CENTER">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="empListbody" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="985.0" text="Employee List Body" textAlignment="CENTER">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="myTasksBody" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="985.0" text="My Tasks Body" textAlignment="CENTER">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="assignedTasksBody" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="985.0" text="Assigned Tasks Body" textAlignment="CENTER">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="profileBody" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="985.0" text="Profile Body" textAlignment="CENTER">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="dashboardBody" prefHeight="590.0" prefWidth="1216.0" style="-fx-background-color: rgba(239, 255, 239, 1);">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="411.0" minHeight="10.0" prefHeight="264.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="484.0" minHeight="10.0" prefHeight="463.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="684.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="92.0" prefHeight="40.0" prefWidth="231.0" text="Progress Tasks" textFill="#9ab521">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="26.0" prefHeight="59.0" prefWidth="68.0" text="03" textFill="#076285">
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="170.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/progress-tasks.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="92.0" prefHeight="40.0" prefWidth="219.0" text="Pending Tasks" textFill="#904205">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="26.0" prefHeight="59.0" prefWidth="68.0" text="05" textFill="#076285">
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="166.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/pending-tasks.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="92.0" prefHeight="40.0" prefWidth="195.0" text="All Tasks" textFill="#180183">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="26.0" prefHeight="59.0" prefWidth="68.0" text="10" textFill="#076285">
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="174.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/task2-logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Pane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="92.0" prefHeight="40.0" prefWidth="195.0" text="Completed" textFill="#097203">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="26.0" prefHeight="59.0" prefWidth="68.0" text="02" textFill="#076285">
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="166.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/complete-tasks.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <PieChart prefHeight="327.0" prefWidth="1729.0" GridPane.rowIndex="1" />
+                        <PieChart GridPane.rowIndex="1" />
+                        <BubbleChart mouseTransparent="true" prefHeight="383.0" prefWidth="1246.0" title="Graphical Repersentation of Tasks" titleSide="BOTTOM" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="BASELINE">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <padding>
+                              <Insets left="50.0" right="60.0" />
+                           </padding>
+                        </BubbleChart>
+                        <Label alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="1735.0" text="Copyright © 2023 TMS. All rights reserved. Application developed by panditsoft.in" textAlignment="CENTER" textFill="#015a36" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children></StackPane>
+            <VBox id=".button" layoutY="5.0" prefHeight="620.0" prefWidth="250.0" style="-fx-background-color: rgba(1, 90, 54, 0.87);" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="146.0" prefWidth="272.0" style="-fx-background-color: rgba(2, 78, 58, 1);">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/tms-logo-new.png" />
+                           </image>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="613.0" prefWidth="272.0">
+                     <children>
+                        <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" stylesheets="@application.css" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnAllTasks" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="All Tasks" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/lasss.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnEmployeeLIst" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="Employee Lists" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/emp-list.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnMyTasks" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="My Tasks" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/taskss.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnAssignedTasks" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="Assigned Tasks" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/atask.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnProfile" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="Profile " textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/us.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: transparent;" styleClass=".button:hover{background-color:pink'}" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <Label layoutX="290.0" layoutY="16.0" prefHeight="27.0" prefWidth="333.0" text="Welcome to Task Management System">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox fx:id="headerStatus" layoutX="250.0" layoutY="67.0" prefHeight="84.0" prefWidth="1197.0" style="-fx-background-color: #47bc99; -fx-padding: 6;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="dirStatus" alignment="BASELINE_LEFT" prefHeight="19.0" prefWidth="161.0" text="/home/dashboard" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="dashboard" fx:id="headingStatus" alignment="BASELINE_LEFT" graphicTextGap="10.0" lineSpacing="5.0" prefHeight="25.0" prefWidth="192.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-160.0" top="35.0" />
+                     </HBox.margin>
+                  </Label>
+                  <VBox alignment="BASELINE_LEFT" prefHeight="32.0" prefWidth="45.0">
+                     <children>
+                        <MenuBar style="-fx-background-color: none;" />
+                     </children>
+                     <padding>
+                        <Insets top="30.0" />
+                     </padding>
+                  </VBox>
+                  <ImageView fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="C:/Users/Puneet/Downloads/TMS-main/TMS-main/LoginJavaFX/src/image/profile image.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="800.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <MenuButton alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#030000">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Profile" />
+                        <MenuItem mnemonicParsing="false" text="Setting" />
+                      <MenuItem fx:id="logoutMenue" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="-5.0" top="-5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>
